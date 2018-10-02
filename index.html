@@ -1,13 +1,59 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
+
 <head>
+  <title>Pig Dice</title>
   <link href="css/bootstrap.css" rel="stylesheet" type="text/css">
   <link href="css/styles.css" rel="stylesheet" type="text/css">
-  <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
+  <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
+    crossorigin="anonymous"></script>
   <script src="js/scripts.js"></script>
-  <title>Pig Dice:</title>
+  <link href="https://fonts.googleapis.com/css?family=Satisfy" rel="stylesheet">
 </head>
+
 <body>
-  
+  <h1>PIG DICE</h1>
+  <div class="start container">
+    <br>
+    <form id="playerOne">
+      <div class="form-group">
+        <label class="textBoxLabel" for="playerOneName">Player One:</label><br>
+        <input required class="playerOneName" type="text" placeholder="Enter your name">
+      </div>
+    </form>
+
+    <form id="playerTwo">
+      <div class="form-group">
+        <label class="textBoxLabel" for="playerTwoName">Player Two:</label><br>
+        <input required class="playerTwoName" type="text" placeholder="Enter your name">
+      </div>
+    </form>
+
+    <button id="startButton" class="button">Start</button>
+  </div>
+
+  <div class="console container">
+    <div class="row">
+      <div class="col-md-6">
+        <h2>Player 1: <span id="playerOneName"><span></h2>
+        <button id="playerOneRoll" class="button">Roll</button>
+        <button id="playerOneHold" class="button">Hold</button>
+        <h2 id="playerOneDiceRoll">Dice Roll:</h2>
+        <p id="playerOneRoundTotal">Round Total:</p>
+        <p id="playerOneTotalScore">Your Score:</p>
+      </div>
+
+      <div class="col-md-6">
+        <h2>Player 2: <span id="playerTwoName"><span></h2>
+        <button id="playerTwoRoll" class="button">Roll</button>
+        <button id="playerTwoHold" class="button">Hold</button>
+        <h2 id="playerTwoDiceRoll">Dice Roll:</h2>
+        <p id="playerTwoRoundTotal">Round Total:</p>
+        <p id="playerTwoTotalScore">Your Score:</p>
+      </div>
+    </div>
+    <button id="restartGame" class="button">RESTART GAME</button>
+  </div>
 </body>
+
 </html>
