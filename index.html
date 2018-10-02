@@ -3,22 +3,30 @@
 
 <head>
   <title>Pig Dice</title>
+  <!-- //CSS links: -->
   <link href="css/bootstrap.css" rel="stylesheet" type="text/css">
   <link href="css/styles.css" rel="stylesheet" type="text/css">
+  <!-- //JS links: -->
   <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
     crossorigin="anonymous"></script>
   <script src="js/scripts.js"></script>
+  <!-- //Fonts link: -->
   <link href="https://fonts.googleapis.com/css?family=Satisfy" rel="stylesheet">
 </head>
 
 <body>
-  <h1 class="jumbotron" >PIG DICE</h1>
+  <h1 class="jumbotron">PIG DICE</h1>
+
+
+  <!-- //START PAGE: -->
+  
   <div class="start container">
     <form id="playerOne">
       <div class="form-group">
         <label class="textBoxLabel" for="playerOneName">Player One :</label><br>
         <input required class="playerOneName" type="text" placeholder="Enter your name">
-      </div>
+      </div> <!-- //this closes the 'start' container div -->
+
     </form>
 
     <form id="playerTwo">
@@ -28,8 +36,13 @@
       </div>
     </form>
     <hr>
+
+    <!-- //Start button: -->
     <button id="startButton" class="button">Start</button>
-  </div>
+  </div> 
+
+
+  <!-- //CONSOLE PAGE: -->
 
   <div class="console container">
     <div class="row">
@@ -40,7 +53,7 @@
         <h2 id="playerOneDiceRoll">Dice Roll:</h2>
         <p id="playerOneRoundTotal">Round Total:</p>
         <p id="playerOneTotalScore">Your Score:</p>
-      </div>
+      </div> <!-- //this closes the first 'column' div -->
 
       <div class="col-md-6">
         <h2>Player 2: <span id="playerTwoName"><span></h2>
@@ -49,11 +62,14 @@
         <h2 id="playerTwoDiceRoll">Dice Roll:</h2>
         <p id="playerTwoRoundTotal">Round Total:</p>
         <p id="playerTwoTotalScore">Your Score:</p>
-      </div>
-    </div>
+      </div> <!-- //this closes the second 'column' div -->
+    </div> <!-- //this closes the 'row' div -->
     <hr>
+
+    <!-- //Restart button: -->
     <button id="restartGame" class="button">RESTART GAME</button>
-  </div>
+
+  </div> <!-- //this closes the 'console' container div -->
 </body>
 
 </html>
