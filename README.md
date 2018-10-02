@@ -7,12 +7,14 @@
 
 ## DESCRIPTION:
 **Game Play:**
+
   Pig dice game is played with a single six-sided die and players are allowed to make any number of rolls in each turn. After each roll the dice value is added to their score for that turn. After each roll player can decide whether to stop rolling and claim the total turn score or continue rolling. If they roll a 1 then they lose all points scored in a particular turn and turn is then passed to the opponent. This has no impact on their overall score. If players decide to stop rolling, they get the points scored so far which is added to their overall score.
 
   The first player to score 100 points wins the game.
 
 ## SPECIFICATIONS
   (using Behaviour Driven Development)
+  
   I. If the player rolls a 1, they score nothing and it becomes the next player's turn.
 
 
@@ -25,6 +27,7 @@
   IV. The first player to score 100 or more points wins.
 
    **Combined input abd output Example:**
+
    The first player, X, begins a turn with a roll of 5. X could hold and score 5 points, but chooses to roll again. X rolls a 2, and could hold with a turn total of 7 points, but chooses to roll again. X rolls a 1, and must end his/her turn without scoring. The next player, Y, rolls the sequence 4-5-3-5-5, after which he/she chooses to hold, and adds his/her turn total of 22 points to his/her score.
 
 ##RUNNING THE TESTS
