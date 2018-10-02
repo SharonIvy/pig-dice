@@ -1,3 +1,18 @@
 .console {
   display: none;
 }
+
+.button{
+    background-color: rgb(90, 88, 88);
+    color: white;
+}
+
+h1 {
+    font-size: 75px;
+    letter-spacing: 7.5px;
+    font-style: italic;
+    font-weight: bolder;
+}
+.textBoxLabel {
+    text-decoration-line: overline;
+}
