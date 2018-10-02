@@ -1,4 +1,5 @@
-//Business Logic:
+//BUSINESS LOGIC:
+
 var playerOne = "";
 var playerTwo = "";
 
@@ -6,6 +7,7 @@ var dice = function () {
   return Math.floor(6 * Math.random()) + 1;
 }
 
+// Player constructor:
 function Player(turn) {
   this.playerName;
   this.turn = turn;
@@ -14,6 +16,8 @@ function Player(turn) {
   this.totalScore = 0;
 }
 
+//Player prototype:
+//Functionality for if the player rolls a 1;
 Player.prototype.rollone = function () {
   if (this.roll === 1) {
     this.score = 0;
@@ -23,19 +27,19 @@ Player.prototype.rollone = function () {
     this.score += this.roll;
   }
 }
-
+//Functionality for if the player chooses to hold;
 Player.prototype.hold = function () {
   this.totalScore += this.score;
   this.score = 0;
   alert(this.playerName + ", your turn is over.");
 }
-
+//Functionality for if the player wins;
 Player.prototype.winner = function () {
   if (this.totalScore >= 100) {
     alert(this.playerName + " won!");
   }
 }
-
+//Functionality for restarting game;
 Player.prototype.restartGame = function () {
   this.roll = 0;
   this.score = 0;
@@ -43,12 +47,16 @@ Player.prototype.restartGame = function () {
   this.playerName = "";
 }
 
-//User Interface:
+
+//USER INTERFACE:
+
 $(document).ready(function () {
 
+  //Start button function:
   $("button#startButton").click(function (event) {
     playerOne = new Player(true);
     playerTwo = new Player(false);
+    //Hide and show start and console pages respectively onclick;
     $(".console").show();
     $(".start").hide();
 
@@ -62,7 +70,10 @@ $(document).ready(function () {
     playerTwo.playerName = playerTwoName;
 
   });
+
+  //Restart button function:
   $("button#restartGame").click(function (event) {
+    //Hide and show console and start pages respectively onclick;
     $(".console").hide();
     $(".start").show();
     clearValues();
@@ -76,13 +87,15 @@ $(document).ready(function () {
     $("#playerTwoDiceRoll").empty();
   });
 
+  //Roll function:
+  //Player one;
   $("button#playerOneRoll").click(function (event) {
     playerOne.roll = dice();
     $("#playerOneDiceRoll").text(playerOne.roll);
     playerOne.rollone();
     $("#playerOneRoundTotal").text(playerOne.score);
   });
-
+  //Player two;
   $("button#playerTwoRoll").click(function (event) {
     playerTwo.roll = dice();
     $("#playerTwoDiceRoll").text(playerTwo.roll);
@@ -90,6 +103,8 @@ $(document).ready(function () {
     $("#playerTwoRoundTotal").text(playerTwo.score);
   });
 
+  //Hold and win functions:
+  //Player one;
   $("button#playerOneHold").click(function (event) {
     playerOne.hold();
     $("#playerOneTotalScore").text(playerOne.totalScore);
@@ -97,7 +112,7 @@ $(document).ready(function () {
     $("#playerOneDiceRoll").empty();
     playerOne.winner();
   });
-
+  //Player two;
   $("button#playerTwoHold").click(function (event) {
     playerTwo.hold();
     $("#playerTwoTotalScore").text(playerTwo.totalScore);
