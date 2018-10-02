@@ -14,7 +14,7 @@
 
 ## SPECIFICATIONS
   (using Behaviour Driven Development)
-  
+
   I. If the player rolls a 1, they score nothing and it becomes the next player's turn.
 
 
@@ -39,7 +39,7 @@
 ## PROJECT SETUP REQUIREMENTS:
   * Fork this repository.
   * Run the command;
-    'git clone https://github.com/SharonIvy/javascript-quiz.git' to clone.
+    'git clone https://github.com/SharonIvy/pig-dice.git' to clone.
 
 ## LINK TO LIVE SITE ON GITHUB PAGES
   https://sharonivy.github.io/pig-dice/
