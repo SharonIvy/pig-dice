@@ -16,3 +16,12 @@ h1 {
 .textBoxLabel {
     text-decoration-line: overline;
 }
+
+body{
+    text-align: center;
+    background-image: url(../images/lines.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    font-size: 50px;
+    font-family: 'Satisfy', cursive;
+}
