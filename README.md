@@ -27,6 +27,12 @@
    **Combined input abd output Example:**
    The first player, X, begins a turn with a roll of 5. X could hold and score 5 points, but chooses to roll again. X rolls a 2, and could hold with a turn total of 7 points, but chooses to roll again. X rolls a 1, and must end his/her turn without scoring. The next player, Y, rolls the sequence 4-5-3-5-5, after which he/she chooses to hold, and adds his/her turn total of 22 points to his/her score.
 
+##RUNNING THE TESTS
+  The program should achieve the following basic functions when it runs:
+    *The player can roll the dice.
+    *Show's both player's results after taking turns
+    *Clears previous results before your new results are shown/displayed
+
 ## PROJECT SETUP REQUIREMENTS:
   * Fork this repository.
   * Run the command;
