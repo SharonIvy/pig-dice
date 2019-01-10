@@ -1,4 +1,5 @@
-//BUSINESS LOGIC:
+//BUSINESS LOGIC
+
 
 var playerOne = "";
 var playerTwo = "";
@@ -7,7 +8,7 @@ var dice = function () {
   return Math.floor(6 * Math.random()) + 1;
 }
 
-// Player constructor:
+//PLAYER CONSTRUCTOR:
 function Player(turn) {
   this.playerName;
   this.turn = turn;
@@ -16,7 +17,7 @@ function Player(turn) {
   this.totalScore = 0;
 }
 
-//Player prototype:
+//PLAYER PROTOTYPE:
 //Functionality for if the player rolls a 1;
 Player.prototype.rollone = function () {
   if (this.roll === 1) {
@@ -39,20 +40,16 @@ Player.prototype.winner = function () {
     alert(this.playerName + " won!");
   }
 }
-//Functionality for restarting game;
-Player.prototype.restartGame = function () {
-  this.roll = 0;
-  this.score = 0;
-  this.totalScore = 0;
-  this.playerName = "";
-}
 
 
-//USER INTERFACE:
+
+
+//USER INTERFACE
+
 
 $(document).ready(function () {
 
-  //Start button function:
+  //START BUTTON FUNCTION:
   $("button#startButton").click(function (event) {
     playerOne = new Player(true);
     playerTwo = new Player(false);
@@ -71,23 +68,15 @@ $(document).ready(function () {
 
   });
 
-  //Restart button function:
+  //RESTART BUTTON FUNCTION:
   $("button#restartGame").click(function (event) {
     //Hide and show console and start pages respectively onclick;
     $(".console").hide();
     $(".start").show();
-    clearValues();
-    playerOne.restartGame();
-    playerTwo.restartGame();
-    $("#playerOneRoundTotal").empty();
-    $("#playerOneTotalScore").empty();
-    $("#playerOneDiceRoll").empty();
-    $("#playerTwoRoundTotal").empty();
-    $("#playerTwoTotalScore").empty();
-    $("#playerTwoDiceRoll").empty();
+    location.reload();
   });
 
-  //Roll function:
+  //ROLL FUNCTION:
   //Player one;
   $("button#playerOneRoll").click(function (event) {
     playerOne.roll = dice();
@@ -103,7 +92,7 @@ $(document).ready(function () {
     $("#playerTwoRoundTotal").text(playerTwo.score);
   });
 
-  //Hold and win functions:
+  //HOLD AND WIN FUNCTION:
   //Player one;
   $("button#playerOneHold").click(function (event) {
     playerOne.hold();
